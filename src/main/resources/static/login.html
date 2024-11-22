@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>酒店管理登录界面</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url("img/001.jpg");
+            background-size: 75%;
+        }
+       div {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 360px;
+            padding: 10px;
+            background-color: #f0f0f0;
+
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        input[type="text"], input[type="password"] {
+            width: 70%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-size: 18px;
+            
+        }
+        
+        button {
+            width: 30%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div id="loginForm">
+        <h1>管理员登录</h1>
+        <form align="center" >
+            <input name="userName" type="text" id="userName" placeholder="用户名" required>
+            <input name="password" type="password" id="password" placeholder="密码" required>
+            <!-- <a href="http://localhost:8099">
+                <button type="button" value="登录">登录</button>
+            </a> -->
+            
+            <button type="button" value="登录" onclick="login()">登录</button>
+            
+
+            
+        </form>
+    </div>
+    <!-- 引入axios -->
+    <!-- <script src="./js/axios.min.js"></script>
+    <script src="./js/vue.js"></script>
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.min.js"></script> -->
+    <!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
+
+
+    <script>
+        // 设置后台服务地址
+        // axios.defaults.baseURL = "http://localhost:8099/admin";
+        // axios.defaults.timeout = 3000;
+        function login(){
+            console.log("登录");
+            var userName=document.getElementById("userName").value;
+            var password=document.getElementById("password").value;
+
+            console.log("---------------userName---------------: "+userName);
+            console.log("---------------password---------------: "+password);
+
+            try {
+                if(userName=="luolin"&&password=="123456"){
+                    location.href="http://localhost:8099";
+                }else if(userName==""||password==""){
+                    alert("请输入账号密码");
+
+                }else{
+                    alert("账号或密码错误");
+                 }
+            } catch (error) {
+                console.log(error);
+                alert("登录失败，请重新尝试")
+            }
+
+
+            // axios.post("/login",{
+            //     params:{
+            //         userName:userName,
+            //         password:password
+            //     }
+            // })
+            // .then(resp=>{
+            //     if(resp){
+            //         location.href="http://localhost:8099";
+            //     }else{
+            //         alert("账号或密码错误");
+            //     }
+            // })
+            // .catch(err=>{
+            //     console.log(err);
+            //     alert("登录失败，请重新尝试");
+            // });
+        }
+
+    </script>
+    
+</body>
+</html>
+

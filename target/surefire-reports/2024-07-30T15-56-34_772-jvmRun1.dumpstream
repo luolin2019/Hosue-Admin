@@ -1,0 +1,33 @@
+# Created at 2024-07-30T15:56:38.833
+TestSet has not finished before stream error has appeared >> initializing exit by non-null configuration: null
+java.io.EOFException
+	at java.base/java.io.DataInputStream.readInt(DataInputStream.java:398)
+	at org.apache.maven.surefire.booter.MasterProcessCommand.decode(MasterProcessCommand.java:115)
+	at org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:391)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+
+# Created at 2024-07-30T15:56:39.420
+Unexpected IOException with stream: 07-30 15:56:39:419  INFO 30964 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+
+
+# Created at 2024-07-30T15:56:39.630
+Unexpected IOException with stream: 07-30 15:56:39:629  INFO 30964 --- [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+
+
+# Created at 2024-07-30T15:56:40.216
+Unexpected IOException with stream: 07-30 15:56:40:214  INFO 30964 --- [           main] c.i.hotel.HotelAdminApplicationTests     : Started HotelAdminApplicationTests in 4.012 seconds (JVM running for 5.129)
+
+
+# Created at 2024-07-30T15:56:40.368
+Unexpected IOException: 5,1,cn.itcast.hotel.HotelAdminApplicationTests,contextLoads,null,null,null
+
+
+# Created at 2024-07-30T15:56:41.557
+Unexpected IOException: 6,1,cn.itcast.hotel.HotelAdminApplicationTests,contextLoads,null,null,null
+
+
+# Created at 2024-07-30T15:56:41.560
+Unexpected IOException: 2,1,org.apache.maven.surefire.junitplatform.JUnitPlatformProvider,cn.itcast.hotel.HotelAdminApplicationTests,null,null,null
+
+
